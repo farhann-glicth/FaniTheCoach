@@ -1,186 +1,127 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Fani The Coach — Personal Trainer</title>
-  <meta name="description" content="Fani The Coach — Certified Personal Trainer. Fat loss, muscle gain, customized diet plans & online coaching." />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+:root{
+  --bg:#000;               /* fallback */
+  --neon:#1DE06A;          /* bright green accent */
+  --muted:#bfc5c0;
+  --card:#0f0f0f;
+  --glass: rgba(255,255,255,0.04);
+  --radius:14px;
+  --container:1150px;
+}
 
-  <!-- NAV / LOGO -->
-  <header class="site-header">
-    <div class="container header-row">
-      <!-- Text logo: replace with <img src="logo.png"> if you make a logo file -->
-      <a class="logo" href="#">Fani<span>TheCoach</span></a>
-      <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#transformations">Transformations</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="book-btn" href="https://wa.me/923064813085" target="_blank" rel="noopener">Book Now</a>
-    </div>
-  </header>
+/* Reset */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color:#fff;
+  line-height:1.45;
+  background:#000;
+}
 
-  <!-- Full fixed background overlay is handled in CSS. Put content on top. -->
-  <main class="page-content">
-    <!-- HERO -->
-    <section class="hero" id="home" aria-label="Hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1 class="brand-title">Fani The Coach</h1>
-          <p class="slogan">Your Fitness Journey Starts Here</p>
-          <p class="lead">Certified Personal Trainer • Fat Loss & Muscle Gain • Customized Diet Plans</p>
+/* Full fixed background using your photo (rename accordingly) */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image: url('hero-bg.jpg'); /* <-- put your uploaded image in repo root and name it hero-bg.jpg */
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed; /* fixed background */
+  filter: saturate(0.05) contrast(0.9) brightness(0.35); /* darkened, low-saturation for readability */
+  z-index: -3;
+}
 
-          <div class="hero-ctas">
-            <a class="btn primary" href="#services">See Services</a>
-            <a class="btn outline" href="https://wa.me/923064813085" target="_blank" rel="noopener">Chat on WhatsApp</a>
-          </div>
+/* subtle gradient overlay to emphasize neon */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.7) 100%);
+  z-index:-2;
+}
 
-          <div class="socials">
-            <a href="https://instagram.com/fani_thecoach" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://facebook.com/fani.thecoach" target="_blank" rel="noopener">Facebook</a>
-            <a href="https://www.snapchat.com/add/f4fanii" target="_blank" rel="noopener">Snapchat</a>
-            <a href="https://wa.me/923064813085" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </section>
+/* Utility container */
+.container{width:min(var(--container),94%);margin:0 auto;}
 
-    <!-- ABOUT -->
-    <section class="section about" id="about">
-      <div class="container">
-        <h2>About Fani</h2>
-        <div class="about-grid">
-          <p>I'm Muhammad Farhan — known as Fani. With 10+ years of experience, I help clients in the gym, at home, and online achieve sustainable transformations using strength training and practical nutrition.</p>
-          <ul>
-            <li>✅ 10+ years experience</li>
-            <li>✅ Personalized training & diet plans</li>
-            <li>✅ Programs for all ages and levels</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+/* HEADER / LOGO */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: blur(4px);
+  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15));
+  border-bottom:1px solid rgba(255,255,255,0.04);
+}
+.header-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-weight:800;color:var(--neon);font-size:18px;text-decoration:none}
+.logo span{color:#fff;font-weight:700;margin-left:6px}
+.nav-links{display:flex;gap:16px}
+.nav-links a{color:rgba(255,255,255,0.85);text-decoration:none;font-weight:600}
+.nav-links a:hover{color:var(--neon)}
+.book-btn, .book-btn:visited{display:none} /* hidden, using Book Now CTA on right */
 
-    <!-- SERVICES -->
-    <section class="section services" id="services">
-      <div class="container">
-        <h2>Services</h2>
-        <p class="subtitle">Choose the program that fits your goal</p>
+/* Book CTA on right */
+.book-btn{background:var(--neon);color:#000;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:800}
 
-        <div class="cards">
-          <article class="card">
-            <h3>Fat Loss Program</h3>
-            <p>Structured workouts, calorie & macro targets, weekly check-ins and progress tracking.</p>
-            <div class="price">PKR 10,000 / month</div>
-          </article>
+/* HERO */
+.hero{min-height:78vh;display:flex;align-items:center}
+.hero-inner{display:flex;align-items:center;gap:36px;padding:80px 0}
+.hero-text{max-width:780px}
+.brand-title{font-size:44px;color:var(--neon);margin:0 0 6px;letter-spacing:0.6px}
+.slogan{font-weight:700;color:#fff;margin-bottom:10px;font-size:20px}
+.lead{color:var(--muted);margin-bottom:18px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 20px;border-radius:12px;text-decoration:none;font-weight:800}
+.primary{background:linear-gradient(90deg,var(--neon),#14b95a);color:#000}
+.outline{background:transparent;border:2px solid rgba(30,220,110,0.18);color:var(--neon)}
+.btn:hover{transform:translateY(-4px);transition:all .18s}
 
-          <article class="card highlight">
-            <h3>Muscle Gain Program</h3>
-            <p>Progressive overload plans, hypertrophy-focused workouts and strength tracking.</p>
-            <div class="price">PKR 12,000 / month</div>
-          </article>
+/* socials */
+.socials{margin-top:14px;display:flex;gap:14px}
+.socials a{color:var(--muted);text-decoration:none;font-weight:700;padding:6px 8px;border-radius:8px}
+.socials a:hover{color:var(--neon)}
 
-          <article class="card">
-            <h3>Customized Diet Plans</h3>
-            <p>Meal plans tailored to your goals, preferences, and schedule — sustainable and flexible.</p>
-            <div class="price">PKR 5,000 (one-time)</div>
-          </article>
+/* SECTIONS baseline */
+.section{padding:64px 0}
+.section h2{color:var(--neon);font-size:28px;margin:0 0 10px}
+.subtitle{color:var(--muted);margin-bottom:18px}
 
-          <article class="card">
-            <h3>Home / Gym 1-on-1</h3>
-            <p>Personal sessions focused on technique, form and fast, safe progression.</p>
-            <div class="price">PKR 15,000 / month</div>
-          </article>
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:start}
+.about-grid ul{list-style:none;padding:0;margin:0;color:var(--muted)}
+.about-grid li{margin:8px 0}
 
-          <article class="card">
-            <h3>Online Coaching</h3>
-            <p>Anywhere-access coaching: video guidance, workout plans, and WhatsApp support.</p>
-            <div class="price">PKR 10,000 / month</div>
-          </article>
-        </div>
-      </div>
-    </section>
+/* SERVICES CARDS */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.card h3{color:var(--neon);margin:0 0 8px}
+.card p{color:var(--muted);font-size:14px;margin-bottom:12px}
+.price{font-weight:800;color:var(--neon)}
+.highlight{box-shadow:0 8px 30px rgba(25,212,107,0.06);border:1px solid rgba(25,212,107,0.12)}
 
-    <!-- TRANSFORMATIONS -->
-    <section class="section transformations" id="transformations">
-      <div class="container">
-        <h2>Transformations</h2>
-        <p class="subtitle">Real clients — real results</p>
-        <div class="gallery">
-          <!-- Replace these with real image files in your repo -->
-          <figure><img src="before1.jpg" alt="Before - client A"><figcaption>Client A — Start</figcaption></figure>
-          <figure><img src="after1.jpg" alt="After - client A"><figcaption>Client A — 12 weeks</figcaption></figure>
-          <figure><img src="before2.jpg" alt="Before - client B"><figcaption>Client B — Start</figcaption></figure>
-          <figure><img src="after2.jpg" alt="After - client B"><figcaption>Client B — 10 weeks</figcaption></figure>
-        </div>
-      </div>
-    </section>
+/* TRANSFORMATIONS gallery */
+.gallery{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:18px}
+.gallery figure{background:rgba(255,255,255,0.02);padding:8px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.gallery img{width:180px;height:180px;object-fit:cover;border-radius:8px;display:block}
 
-    <!-- TESTIMONIALS -->
-    <section class="section testimonials" id="testimonials">
-      <div class="container">
-        <h2>What clients say</h2>
-        <div class="test-grid">
-          <blockquote class="test">
-            <p>“Fani changed my life. I lost 14 kg in 4 months and kept it off. Highly recommended!”</p>
-            <footer>— Aisha</footer>
-          </blockquote>
+/* TESTIMONIALS */
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
+.test{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;border-left:4px solid var(--neon);color:var(--muted)}
+.test footer{color:#fff;margin-top:12px;font-weight:700}
 
-          <blockquote class="test">
-            <p>“Personal, honest coaching. Great programs and real results.”</p>
-            <footer>— Bilal</footer>
-          </blockquote>
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 300px;gap:30px;align-items:center}
+.contact-card{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px}
+.contact-card a{color:var(--neon);text-decoration:none}
 
-          <blockquote class="test">
-            <p>“Custom diet plan actually worked — simple and practical.”</p>
-            <footer>— Sara</footer>
-          </blockquote>
-        </div>
-      </div>
-    </section>
+/* FOOTER */
+.site-footer{padding:18px 0;text-align:center;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
 
-    <!-- CONTACT -->
-    <section class="section contact" id="contact">
-      <div class="container contact-grid">
-        <div>
-          <h2>Ready to Start?</h2>
-          <p>Book a free consultation or message me on WhatsApp now.</p>
-          <a class="btn primary large" href="https://wa.me/923064813085" target="_blank" rel="noopener">Chat on WhatsApp</a>
-        </div>
-
-        <aside class="contact-card">
-          <h3>Connect</h3>
-          <ul>
-            <li>Instagram: <a href="https://instagram.com/fani_thecoach" target="_blank">fani_thecoach</a></li>
-            <li>Facebook: <a href="https://facebook.com/fani.thecoach" target="_blank">fani.thecoach</a></li>
-            <li>Snapchat: <a href="https://www.snapchat.com/add/f4fanii" target="_blank">f4fanii</a></li>
-            <li>WhatsApp: <a href="https://wa.me/923064813085" target="_blank">+92 306 4813085</a></li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© 2025 Fani The Coach — Designed by Farhan</p>
-      </div>
-    </footer>
-  </main>
-
-  <script>
-    // smooth scroll for in-page links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const target = document.querySelector(a.getAttribute('href'));
-        if(target){
-          e.preventDefault();
-          target.scrollIntoView({behavior:'smooth', block:'start'});
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+/* Responsive */
+@media (max-width:900px){
+  .hero-inner{flex-direction:column;text-align:center;padding:60px 0}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .header-row{flex-direction:column;gap:12px;align-items:center}
+  .nav-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+  .brand-title{font-size:34px}
+}
