@@ -1,629 +1,89 @@
-<<<<<<< HEAD
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
 body {
-    background-color: #000;
-    color: #fff;
-}
-
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: gold;
-}
-
-.logo span {
-    color: white;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: gold;
-}
-
-.btn {
-    background-color: gold;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background-color: white;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
 }
 
 /* Hero Section */
 .hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,1)),
-                url('https://images.unsplash.com/photo-1598970434795-0c54fe7c0646') center/cover;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('gym-bg.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-
-.hero h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: gold;
+.hero h1 {
+  font-size: 3rem;
+  color: #FFD700;
+  margin-bottom: 10px;
 }
-
 .hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #ddd;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
-/* ABOUT SECTION */
-.about {
-    padding: 100px 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #111;
-    color: white;
-}
-
-.about .container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.about-text {
-    flex: 1 1 400px;
-}
-
-.about-text h2 {
-    color: gold;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.about-text p {
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #ddd;
-}
-
-.about-img {
-    flex: 1 1 400px;
-}
-
-.about-img img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 0 15px gold;
-}
-
-/* TRANSFORMATIONS SECTION */
-.transformations {
-    padding: 100px 10%;
-    background-color: #000;
-    text-align: center;
-}
-
-.transformations h2 {
-    color: gold;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    color: #ccc;
-    margin-bottom: 40px;
-}
-
-.gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.card {
-    width: 300px;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-    transition: transform 0.4s;
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.center {
-    display: inline-block;
-    margin-top: 40px;
-}
-/* COACHING PLANS */
-.plans {
-    background-color: #111;
-    padding: 100px 10%;
-    text-align: center;
-}
-
-.plans h2 {
-    color: gold;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.plan-cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 50px;
-}
-
-.plan {
-    background-color: #000;
-    border: 1px solid gold;
-    border-radius: 20px;
-    padding: 40px 30px;
-    width: 300px;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.plan:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
-}
-
-.plan h3 {
-    color: gold;
-    margin-bottom: 15px;
-    font-size: 22px;
-}
-
-.plan p {
-    color: #ccc;
-    margin-bottom: 20px;
-}
-
-.plan ul {
-    list-style: none;
-    text-align: left;
-    color: #ddd;
-    margin-bottom: 20px;
-}
-
-.plan ul li {
-    margin-bottom: 8px;
-}
-
-.highlight {
-    background-color: gold;
-    color: black;
-}
-
-.highlight h3 {
-    color: black;
-}
-
-.highlight p, .highlight ul li {
-    color: #333;
-}
-
-/* FOOTER */
-footer {
-    background-color: #000;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-    border-top: 1px solid gold;
-}
-
-.footer-container .logo {
-    font-size: 26px;
-    color: gold;
-}
-
-.footer-container .logo span {
-    color: white;
-}
-
-.footer-container p {
-    margin: 10px 0;
-    color: #ccc;
-}
-
-.socials {
-    margin: 20px 0;
-}
-
-.socials a img {
-    width: 30px;
-    margin: 0 10px;
-    transition: transform 0.3s;
-}
-
-.socials a img:hover {
-    transform: scale(1.2);
-}
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .hero h2 {
-        font-size: 32px;
-    }
-
-    .about .container {
-        flex-direction: column;
-    }
-
-    .plan-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-=======
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background-color: #000;
-    color: #fff;
-}
-
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: gold;
-}
-
-.logo span {
-    color: white;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: gold;
-}
-
 .btn {
-    background-color: gold;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
+  background: #FFD700;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
-
 .btn:hover {
-    background-color: white;
+  background: #fff;
 }
 
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,1)),
-                url('https://images.unsplash.com/photo-1598970434795-0c54fe7c0646') center/cover;
+/* Sections */
+section {
+  padding: 60px 10%;
+  text-align: center;
 }
-
-.hero h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: gold;
+h2 {
+  color: #FFD700;
+  margin-bottom: 20px;
 }
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #ddd;
-}
-/* ABOUT SECTION */
-.about {
-    padding: 100px 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #111;
-    color: white;
-}
-
-.about .container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.about-text {
-    flex: 1 1 400px;
-}
-
-.about-text h2 {
-    color: gold;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.about-text p {
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #ddd;
-}
-
-.about-img {
-    flex: 1 1 400px;
-}
-
-.about-img img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 0 15px gold;
-}
-
-/* TRANSFORMATIONS SECTION */
-.transformations {
-    padding: 100px 10%;
-    background-color: #000;
-    text-align: center;
-}
-
-.transformations h2 {
-    color: gold;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    color: #ccc;
-    margin-bottom: 40px;
-}
-
 .gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-
-.card {
-    width: 300px;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-    transition: transform 0.4s;
+.gallery img {
+  width: 200px;
+  border-radius: 10px;
+  border: 2px solid #FFD700;
 }
-
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.center {
-    display: inline-block;
-    margin-top: 40px;
-}
-/* COACHING PLANS */
 .plans {
-    background-color: #111;
-    padding: 100px 10%;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-
-.plans h2 {
-    color: gold;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.plan-cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 50px;
-}
-
 .plan {
-    background-color: #000;
-    border: 1px solid gold;
-    border-radius: 20px;
-    padding: 40px 30px;
-    width: 300px;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+  background: #111;
+  padding: 20px;
+  border: 1px solid #FFD700;
+  border-radius: 10px;
+  width: 250px;
+}
+.plan span {
+  color: #FFD700;
+  font-weight: bold;
 }
 
-.plan:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+/* Contact */
+.contact .btn {
+  margin-top: 20px;
 }
 
-.plan h3 {
-    color: gold;
-    margin-bottom: 15px;
-    font-size: 22px;
-}
-
-.plan p {
-    color: #ccc;
-    margin-bottom: 20px;
-}
-
-.plan ul {
-    list-style: none;
-    text-align: left;
-    color: #ddd;
-    margin-bottom: 20px;
-}
-
-.plan ul li {
-    margin-bottom: 8px;
-}
-
-.highlight {
-    background-color: gold;
-    color: black;
-}
-
-.highlight h3 {
-    color: black;
-}
-
-.highlight p, .highlight ul li {
-    color: #333;
-}
-
-/* FOOTER */
+/* Footer */
 footer {
-    background-color: #000;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-    border-top: 1px solid gold;
+  background: #111;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #FFD700;
 }
-
-.footer-container .logo {
-    font-size: 26px;
-    color: gold;
-}
-
-.footer-container .logo span {
-    color: white;
-}
-
-.footer-container p {
-    margin: 10px 0;
-    color: #ccc;
-}
-
-.socials {
-    margin: 20px 0;
-}
-
-.socials a img {
-    width: 30px;
-    margin: 0 10px;
-    transition: transform 0.3s;
-}
-
-.socials a img:hover {
-    transform: scale(1.2);
-}
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .hero h2 {
-        font-size: 32px;
-    }
-
-    .about .container {
-        flex-direction: column;
-    }
-
-    .plan-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-}
->>>>>>> 4632ad3dd67360556e3ea4a0fa27e6b1e3272d77
