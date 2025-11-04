@@ -3,182 +3,186 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Fani The Coach — Personal Trainer</title>
-  <meta name="description" content="Fani The Coach — Certified Personal Trainer. Fat loss, muscle gain, customized diet plans & online coaching." />
+  <title>Fani The Coach — Fitness • Nutrition • Transformation</title>
+  <meta name="description" content="Fani The Coach — Personal Trainer. Fat loss, muscle gain, customised diet plans & online coaching." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAV / LOGO -->
+  <!-- Header -->
   <header class="site-header">
-    <div class="container header-row">
-      <!-- Text logo: replace with <img src="logo.png"> if you make a logo file -->
-      <a class="logo" href="#">Fani<span>TheCoach</span></a>
-      <nav class="nav-links">
+    <div class="wrap">
+      <a class="brand" href="#top">
+        <img src="logo.png" alt="Fani The Coach logo" class="logo-img" />
+      </a>
+
+      <nav class="main-nav">
         <a href="#services">Services</a>
         <a href="#transformations">Transformations</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="book-btn" href="https://wa.me/923064813085" target="_blank" rel="noopener">Book Now</a>
+
+      <a class="btn-book" href="https://wa.me/923064813085?text=Hi%20Fani%2C%20I%27m%20interested%20in%20coaching" target="_blank" rel="noopener">Book Now</a>
     </div>
   </header>
 
-  <!-- Full fixed background overlay is handled in CSS. Put content on top. -->
-  <main class="page-content">
-    <!-- HERO -->
-    <section class="hero" id="home" aria-label="Hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1 class="brand-title">Fani The Coach</h1>
-          <p class="slogan">Your Fitness Journey Starts Here</p>
-          <p class="lead">Certified Personal Trainer • Fat Loss & Muscle Gain • Customized Diet Plans</p>
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="wrap hero-content">
+      <h1 class="title">Fani The Coach</h1>
+      <p class="slogan">Your Fitness Journey Starts Here</p>
+      <p class="desc">Certified Personal Trainer • Fat Loss & Muscle Gain • Customized Diet Plans</p>
 
-          <div class="hero-ctas">
-            <a class="btn primary" href="#services">See Services</a>
-            <a class="btn outline" href="https://wa.me/923064813085" target="_blank" rel="noopener">Chat on WhatsApp</a>
-          </div>
-
-          <div class="socials">
-            <a href="https://instagram.com/fani_thecoach" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://facebook.com/fani.thecoach" target="_blank" rel="noopener">Facebook</a>
-            <a href="https://www.snapchat.com/add/f4fanii" target="_blank" rel="noopener">Snapchat</a>
-            <a href="https://wa.me/923064813085" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
+      <div class="hero-ctas">
+        <a class="btn primary" href="#services">See Services</a>
+        <a class="btn outline" href="https://wa.me/923064813085?text=Hi%20Fani%2C%20I%27d%20like%20a%20free%20consultation" target="_blank" rel="noopener">Chat on WhatsApp</a>
       </div>
-    </section>
 
-    <!-- ABOUT -->
-    <section class="section about" id="about">
-      <div class="container">
+      <div class="socials">
+        <a href="https://instagram.com/fani_thecoach" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com/fani.thecoach" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.snapchat.com/add/f4fanii" target="_blank" rel="noopener">Snapchat</a>
+        <a href="mailto:fa33801@gmail.com">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section about">
+    <div class="wrap grid about-grid">
+      <div class="about-text">
         <h2>About Fani</h2>
-        <div class="about-grid">
-          <p>I'm Muhammad Farhan — known as Fani. With 10+ years of experience, I help clients in the gym, at home, and online achieve sustainable transformations using strength training and practical nutrition.</p>
-          <ul>
-            <li>✅ 10+ years experience</li>
-            <li>✅ Personalized training & diet plans</li>
-            <li>✅ Programs for all ages and levels</li>
-          </ul>
+        <p>I'm <strong>Muhammad Farhan</strong> — Fani. With 10+ years of coaching, I help clients transform through smart training, real nutrition, and lasting habit change. Programs for home, gym and online.</p>
+
+        <ul class="bullets">
+          <li>10+ years experience</li>
+          <li>Personalized training & diet</li>
+          <li>Results focused — safe, sustainable progress</li>
+        </ul>
+
+        <a class="btn small" href="https://wa.me/923064813085?text=Hi%20Fani%2C%20I%27m%20ready%20to%20start" target="_blank" rel="noopener">Book a Free Consultation</a>
+      </div>
+
+      <div class="about-photo">
+        <img src="coach-photo.jpg" alt="Coach Fani" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section services">
+    <div class="wrap">
+      <h2>Services</h2>
+      <p class="muted">Choose the program that fits your goal</p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Personal Training (Home & Gym)</h3>
+          <p>1-on-1 coaching focused on technique, strength and consistent progress.</p>
+          <div class="price">PKR 15,000 / month</div>
+        </article>
+
+        <article class="card">
+          <h3>Muscle Gain Program</h3>
+          <p>Progressive overload plans, hypertrophy cycles and strength tracking.</p>
+          <div class="price">PKR 12,000 / month</div>
+        </article>
+
+        <article class="card">
+          <h3>Customized Diet Plans</h3>
+          <p>Meal plans tailored to your goals, preferences and daily schedule.</p>
+          <div class="price">PKR 5,000 (one-time)</div>
+        </article>
+
+        <article class="card">
+          <h3>Online Coaching</h3>
+          <p>Complete remote coaching with video guidance, plans, and WhatsApp support.</p>
+          <div class="price">PKR 10,000 / month</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transformations -->
+  <section id="transformations" class="section transformations">
+    <div class="wrap">
+      <h2>Transformation Gallery</h2>
+      <p class="muted">Real clients — real changes</p>
+
+      <div class="gallery">
+        <figure><img src="before1.jpg" alt="before 1"><figcaption>Client A — Start</figcaption></figure>
+        <figure><img src="after1.jpg" alt="after 1"><figcaption>Client A — 12 weeks</figcaption></figure>
+        <figure><img src="before2.jpg" alt="before 2"><figcaption>Client B — Start</figcaption></figure>
+        <figure><img src="after2.jpg" alt="after 2"><figcaption>Client B — After</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section testimonials">
+    <div class="wrap">
+      <h2>What clients say</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testi">
+          <p>“Fani changed my life — lost 14 kg in 4 months and I've kept it off.”</p>
+          <footer>— Aisha</footer>
+        </blockquote>
+
+        <blockquote class="testi">
+          <p>“Personal, honest coaching. Programs that actually work.”</p>
+          <footer>— Bilal</footer>
+        </blockquote>
+
+        <blockquote class="testi">
+          <p>“Diet plan was simple and effective. Real results.”</p>
+          <footer>— Sara</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Ready to Start?</h2>
+        <p class="muted">Book your free consultation and start your transformation today.</p>
+
+        <div class="stacked-buttons">
+          <a class="btn large" href="https://wa.me/923064813085?text=Hi%20Fani%2C%20I%27m%20interested%20in%20coaching" target="_blank" rel="noopener">WhatsApp Me</a>
+          <a class="btn ghost" href="https://instagram.com/fani_thecoach" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn ghost" href="https://facebook.com/fani.thecoach" target="_blank" rel="noopener">Facebook</a>
+          <a class="btn ghost" href="https://www.snapchat.com/add/f4fanii" target="_blank" rel="noopener">Snapchat</a>
+          <a class="btn ghost" href="mailto:fa33801@gmail.com">Email Me</a>
         </div>
       </div>
-    </section>
 
-    <!-- SERVICES -->
-    <section class="section services" id="services">
-      <div class="container">
-        <h2>Services</h2>
-        <p class="subtitle">Choose the program that fits your goal</p>
+      <aside class="contact-card">
+        <h3>Contact Info</h3>
+        <ul>
+          <li>WhatsApp: <a href="https://wa.me/923064813085" target="_blank">+92 306 4813085</a></li>
+          <li>Email: <a href="mailto:fa33801@gmail.com">fa33801@gmail.com</a></li>
+          <li>Instagram: <a href="https://instagram.com/fani_thecoach" target="_blank">@fani_thecoach</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
 
-        <div class="cards">
-          <article class="card">
-            <h3>Fat Loss Program</h3>
-            <p>Structured workouts, calorie & macro targets, weekly check-ins and progress tracking.</p>
-            <div class="price">PKR 10,000 / month</div>
-          </article>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2025 Fani The Coach — Fitness • Nutrition • Transformation</p>
+    </div>
+  </footer>
 
-          <article class="card highlight">
-            <h3>Muscle Gain Program</h3>
-            <p>Progressive overload plans, hypertrophy-focused workouts and strength tracking.</p>
-            <div class="price">PKR 12,000 / month</div>
-          </article>
-
-          <article class="card">
-            <h3>Customized Diet Plans</h3>
-            <p>Meal plans tailored to your goals, preferences, and schedule — sustainable and flexible.</p>
-            <div class="price">PKR 5,000 (one-time)</div>
-          </article>
-
-          <article class="card">
-            <h3>Home / Gym 1-on-1</h3>
-            <p>Personal sessions focused on technique, form and fast, safe progression.</p>
-            <div class="price">PKR 15,000 / month</div>
-          </article>
-
-          <article class="card">
-            <h3>Online Coaching</h3>
-            <p>Anywhere-access coaching: video guidance, workout plans, and WhatsApp support.</p>
-            <div class="price">PKR 10,000 / month</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRANSFORMATIONS -->
-    <section class="section transformations" id="transformations">
-      <div class="container">
-        <h2>Transformations</h2>
-        <p class="subtitle">Real clients — real results</p>
-        <div class="gallery">
-          <!-- Replace these with real image files in your repo -->
-          <figure><img src="before1.jpg" alt="Before - client A"><figcaption>Client A — Start</figcaption></figure>
-          <figure><img src="after1.jpg" alt="After - client A"><figcaption>Client A — 12 weeks</figcaption></figure>
-          <figure><img src="before2.jpg" alt="Before - client B"><figcaption>Client B — Start</figcaption></figure>
-          <figure><img src="after2.jpg" alt="After - client B"><figcaption>Client B — 10 weeks</figcaption></figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="section testimonials" id="testimonials">
-      <div class="container">
-        <h2>What clients say</h2>
-        <div class="test-grid">
-          <blockquote class="test">
-            <p>“Fani changed my life. I lost 14 kg in 4 months and kept it off. Highly recommended!”</p>
-            <footer>— Aisha</footer>
-          </blockquote>
-
-          <blockquote class="test">
-            <p>“Personal, honest coaching. Great programs and real results.”</p>
-            <footer>— Bilal</footer>
-          </blockquote>
-
-          <blockquote class="test">
-            <p>“Custom diet plan actually worked — simple and practical.”</p>
-            <footer>— Sara</footer>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section contact" id="contact">
-      <div class="container contact-grid">
-        <div>
-          <h2>Ready to Start?</h2>
-          <p>Book a free consultation or message me on WhatsApp now.</p>
-          <a class="btn primary large" href="https://wa.me/923064813085" target="_blank" rel="noopener">Chat on WhatsApp</a>
-        </div>
-
-        <aside class="contact-card">
-          <h3>Connect</h3>
-          <ul>
-            <li>Instagram: <a href="https://instagram.com/fani_thecoach" target="_blank">fani_thecoach</a></li>
-            <li>Facebook: <a href="https://facebook.com/fani.thecoach" target="_blank">fani.thecoach</a></li>
-            <li>Snapchat: <a href="https://www.snapchat.com/add/f4fanii" target="_blank">f4fanii</a></li>
-            <li>WhatsApp: <a href="https://wa.me/923064813085" target="_blank">+92 306 4813085</a></li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© 2025 Fani The Coach — Designed by Farhan</p>
-      </div>
-    </footer>
-  </main>
-
+  <!-- Smooth scroll -->
   <script>
-    // smooth scroll for in-page links
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const target = document.querySelector(a.getAttribute('href'));
-        if(target){
-          e.preventDefault();
-          target.scrollIntoView({behavior:'smooth', block:'start'});
-        }
+      a.addEventListener('click', function(e){
+        const t = document.querySelector(this.getAttribute('href'));
+        if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'}); }
       });
     });
   </script>
