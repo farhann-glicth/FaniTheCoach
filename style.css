@@ -200,4 +200,34 @@ body { padding-top: 96px; } /* adjust if header height changes */
   opacity: 1;
   transform: translateY(0);
 }
+/* --- Pricing Card Hover Enhancements --- */
+.card {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(145deg, rgba(18,18,18,0.9), rgba(35,35,35,0.95));
+  border: 1px solid rgba(255,215,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(202,169,63,0.25);
+  border-color: rgba(255,215,0,0.3);
+}
+
+.card .price {
+  font-size: 18px;
+  margin-top: 10px;
+  text-shadow: 0 0 10px rgba(255,215,0,0.15);
+}
+
+.card .btn.primary {
+  display: inline-block;
+  margin-top: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card .btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255,215,0,0.25);
+}
 
