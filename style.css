@@ -120,7 +120,14 @@ body { padding-top: 96px; } /* adjust if header height changes */
 }
 
 /* hero */
-.hero{min-height:68vh;display:flex;align-items:center}
+/* hero */
+.hero {
+  min-height: 68vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px; /* ✅ Fix overlap with navbar */
+}
+
 .hero-content{padding:70px 0;text-align:center}
 .title{font-size:44px;color:var(--gold);margin:0 0 6px;font-weight:800;letter-spacing:1px}
 .slogan{font-size:20px;margin:0 0 12px;color:#fff;font-weight:700}
