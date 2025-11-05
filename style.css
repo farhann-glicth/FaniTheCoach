@@ -484,4 +484,81 @@ p.muted {
   border-radius: 8px;
   margin-bottom: 15px;
 }
+/* === Side Logo Layout === */
+.layout {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* fixed side logo area */
+.side-logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100vh;
+  background: linear-gradient(180deg, #000 0%, #111 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.5);
+  z-index: 1200;
+  border-right: 1px solid rgba(255,215,0,0.1);
+}
+
+.side-logo img {
+  width: 90px;
+  height: auto;
+  filter: drop-shadow(0 0 15px rgba(255,215,0,0.45));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.side-logo img:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 25px rgba(255,215,0,0.6));
+}
+
+/* shift main content to the right */
+.main-area {
+  margin-left: 120px;
+  width: calc(100% - 120px);
+}
+
+/* navbar stays full width in main area */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(145deg, #0a0a0a, #141414 40%, #262626 100%);
+  border-bottom: 1px solid rgba(255,215,0,0.12);
+  box-shadow: 0 3px 18px rgba(0,0,0,0.6);
+  height: 68px;
+  z-index: 1000;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .side-logo {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .side-logo img {
+    width: 70px;
+    margin: 12px auto;
+    display: block;
+  }
+
+  .main-area {
+    margin-left: 0;
+    width: 100%;
+  }
+}
 
