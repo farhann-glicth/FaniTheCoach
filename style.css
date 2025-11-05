@@ -127,6 +127,16 @@ body { padding-top: 96px; } /* adjust if header height changes */
   text-shadow: 0 0 8px rgba(0,0,0,0.5);
 }
 /* tagline styling + animation */
+p.muted {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #e5c76e;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  text-shadow: 0 0 12px rgba(229,199,110,0.15);
+}
+
 .tagline {
   text-align: center;
   margin-top: 20px !important;
