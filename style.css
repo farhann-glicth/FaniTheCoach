@@ -561,4 +561,29 @@ p.muted {
     width: 100%;
   }
 }
+/* === Top-left logo (outside navbar) === */
+.logo-top {
+  position: fixed;
+  top: 12px;
+  left: 18px;
+  z-index: 1200;
+}
+
+.logo-top img {
+  height: 58px; /* smaller clean size */
+  width: auto;
+  filter: drop-shadow(0 0 10px rgba(255,215,0,0.4));
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.logo-top img:hover {
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 18px rgba(255,215,0,0.6));
+}
+
+/* ensure navbar doesn’t overlap */
+.navbar {
+  margin-top: 84px; /* creates room for logo above */
+}
+
 
