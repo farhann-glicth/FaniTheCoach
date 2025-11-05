@@ -118,8 +118,16 @@ body { padding-top: 96px; } /* adjust if header height changes */
   .book-btn { padding:10px 10px; font-size:13px; }
   body { padding-top:78px; }
 }
+.tagline {
+  text-align: center;
+  margin-top: 20px !important;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gold2);
+  text-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
 
-/* hero */
+
 /* hero */
 .hero {
   min-height: 68vh;
@@ -128,7 +136,7 @@ body { padding-top: 96px; } /* adjust if header height changes */
   padding-top: 100px; /* ✅ Fix overlap with navbar */
 }
 
-.hero-content{padding:70px 0;text-align:center}
+.hero-content{padding-top:160px 0;text-align:center}
 .title{font-size:44px;color:var(--gold);margin:0 0 6px;font-weight:800;letter-spacing:1px}
 .slogan{font-size:20px;margin:0 0 12px;color:#fff;font-weight:700}
 .desc{color:var(--muted);margin-bottom:20px}
