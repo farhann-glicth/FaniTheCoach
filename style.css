@@ -132,10 +132,12 @@ p.muted {
   font-style: italic;
   font-weight: 600;
   color: #e5c76e;
-  letter-spacing: 1px;
-  font-size: 1.3rem;
-  text-shadow: 0 0 12px rgba(229,199,110,0.15);
+  letter-spacing: 1.2px;
+  font-size: 1.8rem; /* increased from 1.3rem */
+  text-shadow: 0 0 15px rgba(229,199,110,0.18);
+  margin-top: 18px;
 }
+
 
 .tagline {
   text-align: center;
