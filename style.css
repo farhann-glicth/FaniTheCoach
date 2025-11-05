@@ -79,7 +79,78 @@ body::after{
 @keyframes shimmer { 0% { left: -200%; } 100% { left: 100%; } }
 
 /* logo */
-.logo { height: 72px; width: auto; display:block; filter: drop-shadow(0 0 8px rgba(255,215,0,0.22)); }
+/* Navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  overflow: hidden;
+  background: linear-gradient(145deg, #0a0a0a, #141414 40%, #262626 100%);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.12);
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* Align logo & nav side by side */
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 16px 48px;
+}
+
+/* Bigger, metallic logo */
+.hero-logo {
+  height: 100px;
+  width: auto;
+  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.35));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.55));
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.nav-links a {
+  color: #ffd66b;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  transition: all 0.2s;
+}
+.nav-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Book button */
+.book-btn {
+  background: linear-gradient(90deg, #ffd700, #e6b800);
+  color: #000;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(202, 169, 63, 0.12);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.book-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(202, 169, 63, 0.18);
+}
+
+/* Add space for fixed header */
+body {
+  padding-top: 130px;
+}
 
 /* nav links */
 .nav-links { display:flex; gap:22px; align-items:center; }
