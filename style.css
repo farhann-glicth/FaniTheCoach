@@ -43,15 +43,18 @@ body::after{
 
 /* header */
 /* Navbar container */
-/* Navbar container */
 .navbar {
-  position: fixed;
+  position: fixed;      /* stays fixed always */
   top: 0;
-  width: 100%;
-  z-index: 1000;
+  left: 0;
+  right: 0;
+  z-index: 9999;        /* stays above all content */
   background: linear-gradient(145deg, #0a0a0a, #141414 40%, #262626 100%);
   border-bottom: 1px solid rgba(255, 215, 0, 0.12);
   box-shadow: 0 3px 18px rgba(0,0,0,0.6);
+  height: 90px;          /* fixed navbar height */
+  display: flex;
+  align-items: center;
 }
 
 /* inner layout */
@@ -59,7 +62,8 @@ body::after{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 50px;
+  padding: 0 50px;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -78,7 +82,7 @@ body::after{
   filter: drop-shadow(0 0 8px rgba(255,215,0,0.25));
 }
 
-/* tagline */
+/* tagline beside logo */
 .tagline {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -89,7 +93,7 @@ body::after{
   animation: floatTag 5s ease-in-out infinite, shimmerGold 8s linear infinite;
 }
 
-/* floating & shimmer animation */
+/* tagline animations */
 @keyframes floatTag {
   0%,100% { transform: translateY(0px); }
   50% { transform: translateY(-4px); }
@@ -119,9 +123,9 @@ body::after{
   transform: translateY(-2px);
 }
 
-/* keep space below navbar */
+/* add padding to body so content doesn't hide under navbar */
 body {
-  padding-top: 95px;
+  padding-top: 100px; /* equal to navbar height */
 }
 
 /* responsive tweaks */
