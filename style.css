@@ -717,5 +717,79 @@ body {
   text-shadow: 0 0 8px rgba(255,215,0,0.3);
   transform: translateY(-2px);
 }
+/* ENSURE TAGLINE IS VISIBLE — fixed, last-resort override */
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999 !important;
+  height: 90px;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,215,0,0.12);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.6);
+}
+
+/* inner container */
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* left group: logo + tagline */
+.nav-left { display:flex; align-items:center; gap:14px; }
+
+/* logo */
+.logo { height:64px; width:auto; display:block; z-index:100000; }
+
+/* tagline — guaranteed visible */
+.tagline {
+  display:inline-block;
+  color: #ffd66b;                 /* visible gold */
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  margin-left: 6px;
+  z-index: 100001;
+  transform-origin: center;
+  animation: floatTag 5s ease-in-out infinite, shimmerTag 15s linear infinite;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* animations */
+@keyframes floatTag {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes shimmerTag {
+  0%   { text-shadow: 0 0 6px rgba(255,215,0,0.25); }
+  50%  { text-shadow: 0 0 18px rgba(255,215,0,0.6); }
+  100% { text-shadow: 0 0 6px rgba(255,215,0,0.25); }
+}
+
+/* nav links on right */
+.nav-links { display:flex; gap:24px; align-items:center; }
+.nav-links a { color: #ffd66b; text-decoration:none; font-weight:600; transition: .18s; }
+.nav-links a:hover { color:#fff; transform: translateY(-2px); }
+
+/* ensure page content starts below the navbar */
+body { padding-top: 95px !important; }
+
+/* responsive */
+@media (max-width:900px) {
+  .navbar-inner { padding: 8px 18px; }
+  .logo { height:52px; }
+  .tagline { font-size:1rem; display:block; }
+  .nav-links { display:none; } /* you can add a hamburger later */
+  body { padding-top: 120px !important; }
+}
 
 
