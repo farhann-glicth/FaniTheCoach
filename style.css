@@ -43,6 +43,7 @@ body::after{
 
 /* header */
 /* Navbar container */
+/* Navbar container */
 .navbar {
   position: fixed;
   top: 0;
@@ -53,13 +54,21 @@ body::after{
   box-shadow: 0 3px 18px rgba(0,0,0,0.6);
 }
 
-/* inner wrap to align content */
+/* inner layout */
 .navbar-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
-  padding: 12px 36px;
+  padding: 14px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* left side (logo + tagline) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 /* logo */
@@ -69,20 +78,32 @@ body::after{
   filter: drop-shadow(0 0 8px rgba(255,215,0,0.25));
 }
 
-/* tagline inside navbar */
+/* tagline */
 .tagline {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #FFD700;
   letter-spacing: 1px;
-  text-shadow: 0 0 8px rgba(255,215,0,0.2);
+  text-shadow: 0 0 8px rgba(255,215,0,0.25);
+  animation: floatTag 5s ease-in-out infinite, shimmerGold 8s linear infinite;
+}
+
+/* floating & shimmer animation */
+@keyframes floatTag {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes shimmerGold {
+  0% { text-shadow: 0 0 6px rgba(255,215,0,0.3); }
+  50% { text-shadow: 0 0 18px rgba(255,215,0,0.6); }
+  100% { text-shadow: 0 0 6px rgba(255,215,0,0.3); }
 }
 
 /* nav links */
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 28px;
   align-items: center;
 }
 .nav-links a {
@@ -90,39 +111,39 @@ body::after{
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.4px;
-  transition: all 0.2s;
+  transition: all 0.25s;
 }
 .nav-links a:hover {
   color: #fff;
-  text-shadow: 0 0 8px rgba(255,215,0,0.15);
+  text-shadow: 0 0 8px rgba(255,215,0,0.2);
   transform: translateY(-2px);
 }
 
-/* spacing fix for body */
+/* keep space below navbar */
 body {
-  padding-top: 100px;
+  padding-top: 95px;
 }
 
-/* Responsive */
+/* responsive tweaks */
 @media (max-width: 900px) {
-  .navbar-inner { flex-wrap: wrap; justify-content: center; }
-  .tagline { order: 3; width: 100%; text-align: center; margin-top: 6px; }
-  .nav-links { flex-wrap: wrap; justify-content: center; gap: 14px; }
-  body { padding-top: 120px; }
-}
-
-
-/* Optional: smaller tweaks for phones */
-@media (max-width: 420px) {
-  .logo {
-    height: 50px;
+  .navbar-inner {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 20px;
   }
-  .book-btn {
-    padding: 10px 10px;
-    font-size: 13px;
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  .logo {
+    height: 60px;
+  }
+  .tagline {
+    font-size: 1rem;
   }
   body {
-    padding-top: 78px;
+    padding-top: 120px;
   }
 }
 
