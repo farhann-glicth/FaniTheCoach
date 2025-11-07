@@ -42,80 +42,91 @@ body::after{
 .wrap{width:min(var(--container),94%);margin:0 auto}
 
 /* header */
-/* Navbar container */
-/* === CLEAN FIXED NAVBAR (FANI THE COACH) === */
+/* === NAVBAR (Fixed Metallic Professional) === */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1200;
   background: linear-gradient(145deg, #0a0a0a, #141414 40%, #262626 100%);
   border-bottom: 1px solid rgba(255, 215, 0, 0.12);
-  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 3px 18px rgba(0,0,0,0.6);
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+}
+
+/* Inner container */
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 30px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px 40px;
 }
 
-/* Left group (logo + tagline) */
-.nav-left {
+/* Left side: Logo + Tagline */
+.logo-area {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
+  text-decoration: none;
 }
 
-/* Logo styling */
-.logo {
-  height: 64px;
+.logo-img {
+  height: 60px;
   width: auto;
-  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.3));
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-.logo:hover {
-  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(255,215,0,0.45));
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Tagline next to logo */
+.logo-img:hover {
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 18px rgba(255,215,0,0.7));
+}
+
+/* Tagline floating beside logo */
 .tagline {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
   font-weight: 700;
-  font-size: 18px;
   color: #ffd66b;
+  text-shadow: 0 0 10px rgba(255,215,0,0.2);
   letter-spacing: 1px;
-  animation: floaty 4s ease-in-out infinite;
-  white-space: nowrap;
+  animation: float 3s ease-in-out infinite;
 }
 
-@keyframes floaty {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-3px); }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
 }
 
-/* Navigation links (right side) */
+/* Right side: nav links */
 .nav-links {
   display: flex;
-  gap: 26px;
   align-items: center;
+  gap: 24px;
 }
+
 .nav-links a {
   color: #ffd66b;
   text-decoration: none;
   font-weight: 600;
-  letter-spacing: 0.4px;
-  transition: all 0.25s;
+  transition: color 0.25s, transform 0.25s;
 }
+
 .nav-links a:hover {
   color: #fff;
-  text-shadow: 0 0 8px rgba(255, 215, 0, 0.12);
+  text-shadow: 0 0 8px rgba(255,215,0,0.3);
   transform: translateY(-2px);
 }
 
-/* Adjust top offset for fixed navbar */
+/* Add top padding to page so content isn't hidden behind navbar */
 body {
   padding-top: 90px;
 }
+
 
 /* Mobile responsive layout */
 @media (max-width: 900px) {
