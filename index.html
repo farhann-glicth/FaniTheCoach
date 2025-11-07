@@ -3,105 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fani The Coach | Fitness & Transformation Expert</title>
+  <title>Fani The Coach | Elite Fitness Trainer</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Cinzel:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- ===== NAVBAR ===== -->
   <header class="navbar">
-    <div class="logo-section">
-      <a href="#home"><img src="logo.png" class="logo" alt="Fani The Coach Logo" /></a>
-      <p class="tagline">Transform. Elevate. Dominate.</p>
+    <div class="navbar-inner">
+      <div class="logo-area">
+        <a href="#home"><img src="logo.png" alt="Fani The Coach" class="logo"></a>
+        <span class="tagline">Transform. Elevate. Dominate.</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#transformations">Transformations</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#transformations">Transformations</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h1>FANI THE COACH</h1>
-    <p>Your Fitness. Your Transformation. Your Power.</p>
-    <a href="#contact" class="cta-btn">Book Your Free Consultation</a>
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="title">Train Like an Elite</h1>
+      <p class="slogan">Personalized coaching designed for your success</p>
+    </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>With 10+ years of experience, I specialize in fat loss, muscle gain, and body transformations through science-based fitness and nutrition coaching. I help clients of all ages achieve the physique and confidence they deserve — anywhere, anytime.</p>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="services">
-    <h2>Elite Training & Coaching</h2>
-    <div class="service-cards">
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="section" id="services">
+    <h2>Services</h2>
+    <p class="muted">Choose your path to transformation</p>
+    <div class="cards">
       <div class="card">
-        <h3>1-on-1 Training</h3>
-        <p>Personalized sessions at your home or gym with full attention and results-focused programming.</p>
+        <h3>Personal Training</h3>
+        <p>1-on-1 sessions focused on your goals and abilities.</p>
       </div>
       <div class="card">
         <h3>Online Coaching</h3>
-        <p>Train anywhere with custom workouts, check-ins, and accountability via online coaching.</p>
+        <p>Train anywhere with my expert guidance and custom plans.</p>
       </div>
       <div class="card">
-        <h3>Custom Diet Plan</h3>
-        <p>One-time detailed meal plan designed around your body goals, preferences, and schedule.</p>
+        <h3>Diet Planning</h3>
+        <p>Custom nutrition plans made for your fitness goals.</p>
       </div>
     </div>
   </section>
 
-  <!-- Transformations -->
-  <section id="transformations" class="transformations">
-    <h2>Client Transformations</h2>
+  <!-- ===== TRANSFORMATIONS ===== -->
+  <section class="section" id="transformations">
+    <h2>Transformations</h2>
     <div class="gallery">
-      <img src="t1.jpg" alt="Transformation 1">
-      <img src="t2.jpg" alt="Transformation 2">
-      <img src="t3.jpg" alt="Transformation 3">
+      <figure><img src="t1.jpg" alt=""></figure>
+      <figure><img src="t2.jpg" alt=""></figure>
+      <figure><img src="t3.jpg" alt=""></figure>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials" class="testimonials">
-    <h2>What Clients Say</h2>
-    <div class="testimonial-card">
-      <p>“Fani transformed not just my body but my mindset. His approach is professional, result-driven, and motivating.”</p>
-      <span>— Sarah M.</span>
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section" id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonials-grid">
+      <div class="testi">
+        <p>“I lost 10kg in 2 months with Fani’s plan! His coaching changed my life.”</p>
+        <footer>- Ayesha</footer>
+      </div>
+      <div class="testi">
+        <p>“The best trainer I’ve ever worked with — truly motivating!”</p>
+        <footer>- Bilal</footer>
+      </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h3>How soon can I see results?</h3>
-      <p>With consistency, most clients see visible changes within 4–6 weeks.</p>
+  <!-- ===== FAQ SECTION ===== -->
+  <section class="section" id="faq">
+    <h2>FAQ</h2>
+    <div class="faq">
+      <p><strong>Do you train at home?</strong><br>Yes, I offer one-on-one sessions at your home or gym.</p>
     </div>
-    <div class="faq-item">
-      <h3>Do you train beginners?</h3>
-      <p>Absolutely. Every plan is adapted to your fitness level and pace.</p>
+    <div class="faq">
+      <p><strong>Are diet plans included?</strong><br>Yes, each program comes with a custom meal plan.</p>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <h2>Book Your Training</h2>
-    <p>Start your transformation journey today. Fill out the form and I’ll connect with you personally.</p>
-    <a href="https://wa.me/923001234567" class="cta-btn">Chat on WhatsApp</a>
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p class="muted">Start your transformation today.</p>
+    <div class="contact-card">
+      <a href="https://wa.me/923001234567">Chat on WhatsApp</a>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Fani The Coach | All Rights Reserved</p>
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <p>© 2025 Fani The Coach | All Rights Reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
