@@ -1,251 +1,107 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Fani The Coach — Fitness • Nutrition • Transformation</title>
-  <meta name="description" content="Fani The Coach — Personal Trainer. Fat loss, muscle gain, customised diet plans & online coaching." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fani The Coach | Fitness & Transformation Expert</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
-  <!-- Header -->
-<!-- ===== Header / Navbar ===== -->
-<header class="navbar">
-  <div class="navbar-inner">
-    <a href="#home" class="logo-area">
-      <img src="logo.png" alt="Fani The Coach" class="logo-img">
-      <span class="tagline">Transform. Elevate. Dominate.</span>
-    </a>
-
-    <nav class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#transformations">Transformations</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-
-
-
-
-
-  <!-- Hero -->
-
-
-  <section id="top" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="wrap hero-content">
-      <h1 class="title">Fani The Coach</h1>
-      <p class="slogan">Your Fitness Journey Starts Here</p>
-      <p class="desc">Certified Personal Trainer • Fat Loss & Muscle Gain Expert • Customized Diet Plans</p>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo-section">
+      <a href="#home"><img src="logo.png" class="logo" alt="Fani The Coach Logo" /></a>
+      <p class="tagline">Transform. Elevate. Dominate.</p>
     </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#transformations">Transformations</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>FANI THE COACH</h1>
+    <p>Your Fitness. Your Transformation. Your Power.</p>
+    <a href="#contact" class="cta-btn">Book Your Free Consultation</a>
   </section>
 
   <!-- About -->
-  <section id="home" class="section home reveal">
-    <div class="wrap grid about-grid">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>I'm <strong>Muhammad Farhan Abbasi</strong> — Fani. With 10+ years of coaching Experience, I help clients transform through smart training, real nutrition, and lasting habit change. Programs for home, gym and online.</p>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>With 10+ years of experience, I specialize in fat loss, muscle gain, and body transformations through science-based fitness and nutrition coaching. I help clients of all ages achieve the physique and confidence they deserve — anywhere, anytime.</p>
+  </section>
 
-        <ul class="bullets">
-          <li>10+ years experience</li>
-          <li>Personalized training & diet</li>
-          <li>Results focused — safe, sustainable progress</li>
-        </ul>
-
-        <a class="btn small" href="https://wa.me/923064813085?text=Hi%20Fani%2C%20I%27m%20ready%20to%20start" target="_blank" rel="noopener">Book a Free Consultation</a>
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>Elite Training & Coaching</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>1-on-1 Training</h3>
+        <p>Personalized sessions at your home or gym with full attention and results-focused programming.</p>
       </div>
-
-      <div class="about-photo">
-        <img src="coach-photo.jpg" alt="Coach Fani" />
+      <div class="card">
+        <h3>Online Coaching</h3>
+        <p>Train anywhere with custom workouts, check-ins, and accountability via online coaching.</p>
+      </div>
+      <div class="card">
+        <h3>Custom Diet Plan</h3>
+        <p>One-time detailed meal plan designed around your body goals, preferences, and schedule.</p>
       </div>
     </div>
   </section>
 
-
-
   <!-- Transformations -->
-  <section id="transformations" class="section transformations reveal">
-    <div class="wrap">
-      <h2>Transformation Gallery</h2>
-      <p class="muted">Real clients — real changes</p>
-
-      <div class="gallery">
-        <figure><img src="before1.jpg" alt="before 1"><figcaption>Client A — Start</figcaption></figure>
-        <figure><img src="after1.jpg" alt="after 1"><figcaption>Client A — 12 weeks</figcaption></figure>
-        <figure><img src="before2.jpg" alt="before 2"><figcaption>Client B — Start</figcaption></figure>
-        <figure><img src="after2.jpg" alt="after 2"><figcaption>Client B — After</figcaption></figure>
-      </div>
+  <section id="transformations" class="transformations">
+    <h2>Client Transformations</h2>
+    <div class="gallery">
+      <img src="t1.jpg" alt="Transformation 1">
+      <img src="t2.jpg" alt="Transformation 2">
+      <img src="t3.jpg" alt="Transformation 3">
     </div>
   </section>
 
   <!-- Testimonials -->
-  <section id="testimonials" class="section testimonials reveal">
-    <div class="wrap">
-      <h2>What clients say</h2>
-      <div class="testimonials-grid">
-        <blockquote class="testi">
-          <p>“Fani changed my life — lost 14 kg in 4 months and I've kept it off.”</p>
-          <footer>— Aisha</footer>
-        </blockquote>
-
-        <blockquote class="testi">
-          <p>“Personal, honest coaching. Programs that actually work.”</p>
-          <footer>— Bilal</footer>
-        </blockquote>
-
-        <blockquote class="testi">
-          <p>“Diet plan was simple and effective. Real results.”</p>
-          <footer>— Sara</footer>
-        </blockquote>
-      </div>
+  <section id="testimonials" class="testimonials">
+    <h2>What Clients Say</h2>
+    <div class="testimonial-card">
+      <p>“Fani transformed not just my body but my mindset. His approach is professional, result-driven, and motivating.”</p>
+      <span>— Sarah M.</span>
     </div>
   </section>
-  
-<section id="services" class="section services revesl">
-  <div class="wrap">
-    <h2 class="section-title">Elite Training & Coaching Plans</h2>
 
-    <p class="muted">Choose your transformation path — each program is fully customized to your goals, lifestyle, and commitment level.</p>
-
-    <div class="cards">
-      <div class="card">
-        <h3>1-on-1 Personal Training</h3>
-        <p>Exclusive one-on-one sessions designed to push your limits and transform your physique.</p>
-        <div class="price">PKR 50,000 / month</div>
-        <a href="https://wa.me/923064813085" target="_blank" class="btn primary">Book Now</a>
-      </div>
-
-      <div class="card">
-        <h3>Online Coaching</h3>
-        <p>Train anytime, anywhere with a personalized online program tailored to your goals.</p>
-        <div class="price">PKR 35,000 / month</div>
-        <a href="https://wa.me/923064813085" target="_blank" class="btn primary">Get Started</a>
-      </div>
-
-      <div class="card">
-        <h3>Custom Diet Plans</h3>
-        <p>Detailed meal plan created for your specific fitness goals and nutrition needs.</p>
-        <div class="price">PKR 5,000 (one-time)</div>
-        <a href="https://wa.me/923064813085" target="_blank" class="btn primary">Order Plan</a>
-      </div>
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>How soon can I see results?</h3>
+      <p>With consistency, most clients see visible changes within 4–6 weeks.</p>
     </div>
-  </div>
-</section>
+    <div class="faq-item">
+      <h3>Do you train beginners?</h3>
+      <p>Absolutely. Every plan is adapted to your fitness level and pace.</p>
+    </div>
+  </section>
 
   <!-- Contact -->
-  <section id="contact" class="section contact reveal">
-    <div class="wrap contact-grid">
-      <div>
-        <h2>Ready to Start?</h2>
-        <p class="muted">Book your free consultation and start your transformation today.</p>
-
-        <div class="stacked-buttons">
-          <a class="btn large" href="https://wa.me/923064813085?text=Hi%20Fani%2C%20I%27m%20interested%20in%20coaching" target="_blank" rel="noopener">WhatsApp Me</a>
-          <a class="btn ghost" href="https://instagram.com/fani_thecoach" target="_blank" rel="noopener">Instagram</a>
-          <a class="btn ghost" href="https://facebook.com/fani.thecoach" target="_blank" rel="noopener">Facebook</a>
-          <a class="btn ghost" href="https://www.snapchat.com/add/f4fanii" target="_blank" rel="noopener">Snapchat</a>
-          <a class="btn ghost" href="mailto:fa33801@gmail.com">Email Me</a>
-        </div>
-      </div>
-
-      <aside class="contact-card">
-        <h3>Contact Info</h3>
-        <ul>
-          <li>WhatsApp: <a href="https://wa.me/923064813085" target="_blank">+92 306 4813085</a></li>
-          <li>Email: <a href="mailto:fa33801@gmail.com">fa33801@gmail.com</a></li>
-          <li>Instagram: <a href="https://instagram.com/fani_thecoach" target="_blank">@fani_thecoach</a></li>
-        </ul>
-      </aside>
-    </div>
+  <section id="contact" class="contact">
+    <h2>Book Your Training</h2>
+    <p>Start your transformation journey today. Fill out the form and I’ll connect with you personally.</p>
+    <a href="https://wa.me/923001234567" class="cta-btn">Chat on WhatsApp</a>
   </section>
-<section id="pricing" class="pricing-section">
-  <h2 class="section-title"> Elite Training & Coaching Plans</h2>
-  <div class="pricing-container">
-
-    <div class="card best-seller">
-      <div class="badge">Best Seller</div>
-      <h3>1-on-1 Personal Training</h3>
-      <p class="price">PKR 50,000 / Month</p>
-      <p>One-on-one sessions at your home or preferred space. Customized workouts and full support.</p>
-      <a href="#book" class="btn primary">Book Now</a>
-    </div>
-
-    <div class="card">
-      <h3>Online Training</h3>
-      <p class="price">PKR 35,000 / Month</p>
-      <p>Virtual coaching with full guidance, video check-ins, and weekly progress tracking.</p>
-      <a href="#book" class="btn primary">Book Online</a>
-    </div>
-
-    <div class="card">
-      <h3>Custom Diet Plan</h3>
-      <p class="price">PKR 5,000 / One Time</p>
-      <p>Personalized diet plan designed for your goals — weight loss, muscle gain, or maintenance.</p>
-      <a href="#book" class="btn primary">Get Plan</a>
-    </div>
-
-  </div>
-
-  <div class="faq-section">
-    <h3>Frequently Asked Questions</h3>
-    <div class="faq">
-      <p><strong>Q:</strong> How do I start my training?</p>
-      <p><strong>A:</strong> Click “Book Now” and I’ll contact you personally to confirm details.</p>
-    </div>
-    <div class="faq">
-      <p><strong>Q:</strong> Can I cancel or pause a plan?</p>
-      <p><strong>A:</strong> Yes, plans are flexible — you can pause or switch anytime.</p>
-    </div>
-    <div class="faq">
-      <p><strong>Q:</strong> Do you train both men and women?</p>
-      <p><strong>A:</strong> Yes — I train clients of all ages and fitness levels, male or female.</p>
-    </div>
-  </div>
-</section>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>© 2025 Fani The Coach — Fitness • Nutrition • Transformation</p>
-    </div>
+  <footer>
+    <p>© 2025 Fani The Coach | All Rights Reserved</p>
   </footer>
 
-  <!-- Smooth scroll -->
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', function(e){
-        const t = document.querySelector(this.getAttribute('href'));
-        if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'}); }
-      });
-    });
-  </script>
- <script>
-  const reveals = document.querySelectorAll('.reveal');
-
-  window.addEventListener('scroll', () => {
-    for (let i = 0; i < reveals.length; i++) {
-      const windowHeight = window.innerHeight;
-      const revealTop = reveals[i].getBoundingClientRect().top;
-      const revealPoint = 100;
-
-      if (revealTop < windowHeight - revealPoint) {
-        reveals[i].classList.add('active');
-      } else {
-        reveals[i].classList.remove('active');
-      }
-    }
-  });
-</script>
- 
+  <script src="script.js"></script>
 </body>
 </html>
