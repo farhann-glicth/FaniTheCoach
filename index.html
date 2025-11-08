@@ -27,7 +27,7 @@
     </div>
   </header>
 
-  <!-- ===== HERO SECTION ===== -->
+  <!-- ===== HERO ===== -->
   <section class="hero" id="home">
     <div class="hero-content">
       <h1 class="title">Train Like an Elite</h1>
@@ -35,8 +35,8 @@
     </div>
   </section>
 
-  <!-- ===== SERVICES SECTION ===== -->
-  <section class="section" id="services">
+  <!-- ===== SERVICES ===== -->
+  <section class="section fade-in" id="services">
     <h2>Services</h2>
     <p class="muted">Choose your path to transformation</p>
     <div class="cards">
@@ -56,7 +56,7 @@
   </section>
 
   <!-- ===== TRANSFORMATIONS ===== -->
-  <section class="section" id="transformations">
+  <section class="section fade-in" id="transformations">
     <h2>Transformations</h2>
     <div class="gallery">
       <figure><img src="t1.jpg" alt=""></figure>
@@ -66,7 +66,7 @@
   </section>
 
   <!-- ===== TESTIMONIALS ===== -->
-  <section class="section" id="testimonials">
+  <section class="section fade-in" id="testimonials">
     <h2>Testimonials</h2>
     <div class="testimonials-grid">
       <div class="testi">
@@ -80,8 +80,8 @@
     </div>
   </section>
 
-  <!-- ===== FAQ SECTION ===== -->
-  <section class="section" id="faq">
+  <!-- ===== FAQ ===== -->
+  <section class="section fade-in" id="faq">
     <h2>FAQ</h2>
     <div class="faq">
       <p><strong>Do you train at home?</strong><br>Yes, I offer one-on-one sessions at your home or gym.</p>
@@ -92,11 +92,11 @@
   </section>
 
   <!-- ===== CONTACT ===== -->
-  <section class="section" id="contact">
+  <section class="section fade-in" id="contact">
     <h2>Contact</h2>
     <p class="muted">Start your transformation today.</p>
     <div class="contact-card">
-      <a href="https://wa.me/923001234567">Chat on WhatsApp</a>
+      <a href="https://wa.me/923001234567" target="_blank">Chat on WhatsApp</a>
     </div>
   </section>
 
@@ -104,6 +104,26 @@
   <footer class="site-footer">
     <p>© 2025 Fani The Coach | All Rights Reserved.</p>
   </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Fade-in animation on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    faders.forEach(f => observer.observe(f));
+  </script>
 
 </body>
 </html>
