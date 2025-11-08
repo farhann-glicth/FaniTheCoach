@@ -116,6 +116,53 @@ body{
   color: #fff;
   font-weight: 600;
 }
+.about-me {
+  max-width: 700px;
+  margin: 40px auto 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  color: #fff;
+  animation: fadeInUp 1.8s ease;
+}
+
+.about-me h2 {
+  color: var(--gold, #ffd700);
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.about-me p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #eee;
+  text-align: justify;
+}
+
+.about-highlights ul {
+  margin: 18px 0;
+  padding-left: 20px;
+}
+
+.about-highlights li {
+  margin-bottom: 6px;
+  list-style: none;
+  color: #ffd66b;
+}
+
+.about-highlights li::before {
+  content: "• ";
+  color: #ffd700;
+  font-weight: bold;
+}
+
+
+
 
 /* ===== Sections ===== */
 .section {
