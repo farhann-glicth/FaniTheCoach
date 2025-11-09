@@ -1,23 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fani The Coach | Elite Fitness Trainer</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fani The Coach — Elite Fitness & Transformations</title>
+  <meta name="description" content="Fani The Coach — Certified Personal Trainer. 10+ years experience, 1000+ transformations. Personal training, online coaching & custom diet plans." />
+  <link rel="icon" href="logo.png" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Style -->
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Cinzel:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar">
+  <!-- NAVBAR (fixed) -->
+  <header class="navbar" role="banner">
     <div class="navbar-inner">
-      <div class="logo-area">
-        <a href="#home"><img src="logo.png" alt="Fani The Coach" class="logo"></a>
-        <span class="tagline">Transform. Elevate. Dominate.</span>
-      </div>
-      <nav class="nav-links">
+      <a class="logo-area" href="#home" aria-label="Fani The Coach — Home">
+        <img src="logo.png" alt="Fani The Coach logo" class="logo-img">
+        <span class="tagline shimmer">Transform · Elevate · Dominate</span>
+      </a>
+
+      <nav class="nav-links" role="navigation" aria-label="Main Navigation">
         <a href="#home">Home</a>
+        <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#transformations">Transformations</a>
         <a href="#testimonials">Testimonials</a>
@@ -27,151 +33,185 @@
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1 class="title">Train Like an Elite</h1>
-      <p class="slogan">Personalized coaching designed for your success</p>
-      <div class="about-me fade-in">
-  <h2>About Me</h2>
-  <p>
-    I’m <strong>Farhan Abbasi</strong> — a <strong>Certified Personal Trainer</strong> and 
-    <strong>Transformation Expert</strong> with over <strong>10 years of experience</strong> 
-    helping men and women of all ages achieve their dream physiques through 
-    customized training and nutrition strategies.
-  </p>
-  <p>
-    From fat loss to muscle gain, I specialize in building lasting lifestyle changes — 
-    guiding my clients both <strong>in-person</strong> and <strong>online</strong> with proven, 
-    sustainable results.
-  </p>
-  <div class="about-highlights">
-    <ul>
-      <li>🏋️‍♂️ Certified Personal Trainer (ISSA)</li>
-      <li>🥗 Expert in Fat Loss & Muscle Gain</li>
-      <li>💪 10+ Years of Professional Experience</li>
-      <li>🏠 1000+ Transformations Around the Globe</li>
-    </ul>
-  </div>
-</div>
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero" aria-label="Hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content wrap">
+        <h1 class="hero-title">Muhammad Farhan Yameen</h1>
+        <p class="hero-slogan">Certified Personal Trainer & Transformation Coach</p>
 
-    </div>
-  </section>
+        <div class="hero-about">
+          <p>
+            With over <strong>10+ years</strong> of hands-on experience, I’ve guided <strong>1000+ clients</strong> around the globe to
+            lasting fat loss and muscle gain. ISSA Certified — Home & Online Coaching — Results-focused plans for all ages.
+          </p>
 
- <!-- ===== SERVICES ===== -->
-<section class="section fade-in" id="services">
-  <h2>Elite Coaching Plans</h2>
-  <p class="muted">Choose your path to transformation</p>
-
-  <div class="premium-cards">
-    <div class="premium-card">
-      <h3>1-on-1 Training</h3>
-      <p>Exclusive personal sessions designed around your body, goals, and lifestyle.</p>
-      <ul>
-        <li>Train at your home or gym</li>
-        <li>Personalized workout programming</li>
-        <li>Weekly progress tracking</li>
-      </ul>
-      <span class="price">PKR 50,000</span>
-      <a href="https://wa.me/923064813085?text=Hi%20Farhan%2C%20I%27m%20interested%20in%201-on-1%20personal%20training%20plan" target="_blank" class="cta-btn">Book Now</a>
-    </div>
-
-    <div class="premium-card">
-      <h3>Online Coaching</h3>
-      <p>Transform anywhere with customized routines and constant virtual support.</p>
-      <ul>
-        <li>Custom online plans</li>
-        <li>Weekly video check-ins</li>
-        <li>Direct support on WhatsApp</li>
-      </ul>
-      <span class="price">PKR 35,000</span>
-      <a href="https://wa.me/923064813085?text=Hi%20Farhan%2C%20I%27m%20interested%20in%20your%20Online%20Coaching%20program" target="_blank" class="cta-btn">Start Coaching</a>
-    </div>
-
-    <div class="premium-card">
-      <h3>Custom Diet Plan</h3>
-      <p>Tailored nutrition built to match your metabolism, preferences, and goals.</p>
-      <ul>
-        <li>1-time full personalized plan</li>
-        <li>Calorie & macro guidance</li>
-        <li>Supplement recommendations</li>
-      </ul>
-      <span class="price">PKR 5,000</span>
-      <a href="https://wa.me/923064813085?text=Hi%20Farhan%2C%20I%20want%20a%20custom%20diet%20plan%20for%20fat%20loss" target="_blank" class="cta-btn">Get Plan</a>
-    </div>
-  </div>
-</section>
-
-
-  <!-- ===== TRANSFORMATIONS ===== -->
-  <section class="section fade-in" id="transformations">
-    <h2>Transformations</h2>
-    <div class="gallery">
-      <figure><img src="t1.jpg" alt=""></figure>
-      <figure><img src="t2.jpg" alt=""></figure>
-      <figure><img src="t3.jpg" alt=""></figure>
-    </div>
-  </section>
-
-  <!-- ===== TESTIMONIALS ===== -->
-  <section class="section fade-in" id="testimonials">
-    <h2>Testimonials</h2>
-    <div class="testimonials-grid">
-      <div class="testi">
-        <p>“I lost 10kg in 2 months with Fani’s plan! His coaching changed my life.”</p>
-        <footer>- Roohi</footer>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-num">1000+</span>
+              <span class="stat-label">Transformations</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">10+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">ISSA</span>
+              <span class="stat-label">Certified</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="testi">
-        <p>“The best trainer I’ve ever worked with — truly motivating!”</p>
-        <footer>- Raghib</footer>
+    </section>
+
+    <!-- ABOUT (anchor target for nav) -->
+    <section id="about" class="section">
+      <div class="wrap">
+        <h2>About</h2>
+        <p class="muted">I’m Fani — a results-driven coach who combines science-based programming with real-world accountability to deliver transformations that last.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== FAQ ===== -->
-  <section class="section fade-in" id="faq">
-    <h2>FAQ</h2>
-    <div class="faq">
-      <p><strong>Do you train at home?</strong><br>Yes, I offer one-on-one sessions at your home or gym.</p>
-    </div>
-    <div class="faq">
-      <p><strong>Are diet plans included?</strong><br>Yes, each program comes with a custom meal plan.</p>
-    </div>
-  </section>
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="wrap">
+        <h2>Elite Coaching Plans</h2>
+        <p class="muted">Choose your path to transformation</p>
 
-  <!-- ===== CONTACT ===== -->
-  <section class="section fade-in" id="contact">
-    <h2>Contact</h2>
-    <p class="muted">Start your transformation today.</p>
-    <div class="contact-card">
-      <a href="https://wa.me/923064813085" target="_blank">Chat on WhatsApp</a>
-    </div>
-  </section>
+        <div class="premium-cards">
+          <article class="premium-card">
+            <h3>1-on-1 Training</h3>
+            <p>Personal sessions tailored to your body and goals — home or gym.</p>
+            <ul>
+              <li>Personalized programming</li>
+              <li>Weekly progress tracking</li>
+              <li>Hands-on coaching</li>
+            </ul>
+            <span class="price">PKR 50,000</span>
+            <a class="cta-btn" target="_blank"
+               href="https://wa.me/923064813085?text=Hi%20Farhan%2C%20I'm%20interested%20in%201-on-1%20training%20plan">
+               Book Now
+            </a>
+          </article>
 
-  <!-- ===== FOOTER ===== -->
+          <article class="premium-card">
+            <h3>Online Coaching</h3>
+            <p>Train anywhere with custom programs and regular check-ins.</p>
+            <ul>
+              <li>Custom online plans</li>
+              <li>Weekly video check-ins</li>
+              <li>Direct WhatsApp support</li>
+            </ul>
+            <span class="price">PKR 35,000</span>
+            <a class="cta-btn" target="_blank"
+               href="https://wa.me/923064813085?text=Hi%20Farhan%2C%20I'm%20interested%20in%20Online%20Coaching">
+               Start Coaching
+            </a>
+          </article>
+
+          <article class="premium-card">
+            <h3>Custom Diet Plan</h3>
+            <p>A single deep-dive nutrition plan built for your lifestyle and goals.</p>
+            <ul>
+              <li>Macro & calorie strategy</li>
+              <li>Food swap options</li>
+              <li>Supplement guidance</li>
+            </ul>
+            <span class="price">PKR 5,000</span>
+            <a class="cta-btn" target="_blank"
+               href="https://wa.me/923064813085?text=Hi%20Farhan%2C%20I%20want%20a%20custom%20diet%20plan">
+               Get Plan
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSFORMATIONS -->
+    <section id="transformations" class="section">
+      <div class="wrap">
+        <h2>Transformations</h2>
+        <p class="muted">Real clients, real results.</p>
+        <div class="gallery">
+          <figure><img src="t1.jpg" alt="Before and After 1"></figure>
+          <figure><img src="t2.jpg" alt="Before and After 2"></figure>
+          <figure><img src="t3.jpg" alt="Before and After 3"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section">
+      <div class="wrap">
+        <h2>Testimonials</h2>
+        <div class="testimonials-grid">
+          <blockquote class="testi">“I lost 12kg and gained confidence — Fani’s plans are real.” <footer>- Ayesha</footer></blockquote>
+          <blockquote class="testi">“Professional, motivating, and results-driven.” <footer>- Bilal</footer></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="wrap">
+        <h2>FAQ</h2>
+        <div class="faq">
+          <p><strong>Do you train at home?</strong><br/>Yes — I offer home and gym sessions as well as online coaching.</p>
+        </div>
+        <div class="faq">
+          <p><strong>How long to see results?</strong><br/>Most clients see visible changes within 4–6 weeks with consistent effort.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p class="muted">Ready to start? Message me on WhatsApp and I’ll respond personally.</p>
+        <div class="contact-card">
+          <a class="cta-btn" target="_blank" href="https://wa.me/923064813085?text=Hi%20Farhan%2C%20I%27m%20ready%20to%20start">Chat on WhatsApp</a>
+          <p style="margin-top:12px;color:var(--muted);font-size:.95rem;">Or email: <a href="mailto:fa33801@gmail.com" class="muted">fa33801@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <p>© 2025 Fani The Coach | All Rights Reserved.</p>
+    <div class="wrap">
+      <p>© <span id="year"></span> Fani The Coach — All rights reserved.</p>
+      <p class="muted">Follow: <a href="https://instagram.com/fani_thecoach" target="_blank" class="muted">@fani_thecoach</a> • <a href="https://facebook.com/fani.thecoach" target="_blank" class="muted">fb/fani.thecoach</a> • Snapchat f4fanii</p>
+    </div>
   </footer>
 
+  <!-- Small JS: smooth scroll, reveal, year -->
   <script>
-    // Smooth scroll
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
+    // smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const href = this.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          const el = document.querySelector(href);
+          if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+        }
       });
     });
 
-    // Fade-in animation on scroll
-    const faders = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) entry.target.classList.add('visible');
+    // intersection reveal
+    const sections = document.querySelectorAll('.section, .hero-about, .gallery, .testimonials-grid');
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{
+        if(en.isIntersecting) en.target.classList.add('visible');
       });
-    });
-    faders.forEach(f => observer.observe(f));
+    }, {threshold:.12});
+    sections.forEach(s=>obs.observe(s));
+
+    // current year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
