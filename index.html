@@ -179,32 +179,27 @@
       <p class="muted">Follow: <a href="https://instagram.com/fani_thecoach" target="_blank" class="muted">@fani_thecoach</a> • <a href="https://facebook.com/fani.thecoach" target="_blank" class="muted">fb/fani.thecoach</a> • Snapchat f4fanii</p>
     </div>
   </footer>
-
-  <!-- Small JS: smooth scroll, reveal, year -->
-  <script>
-    // smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', function(e){
-        const href = this.getAttribute('href');
-        if(href.length>1){
-          e.preventDefault();
-          const el = document.querySelector(href);
-          if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
-        }
-      });
+<script>
+  // Smooth scroll active link effect
+  const links = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let fromTop = window.scrollY;
+    links.forEach(link => {
+      const section = document.querySelector(link.hash);
+      if (section && section.offsetTop <= fromTop + 100 && section.offsetTop + section.offsetHeight > fromTop + 100) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
     });
+  });
 
-    // intersection reveal
-    const sections = document.querySelectorAll('.section, .hero-about, .gallery, .testimonials-grid');
-    const obs = new IntersectionObserver((entries)=>{
-      entries.forEach(en=>{
-        if(en.isIntersecting) en.target.classList.add('visible');
-      });
-    }, {threshold:.12});
-    sections.forEach(s=>obs.observe(s));
+  // Click logo to scroll top
+  document.querySelector('.logo img').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 
-    // current year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+
 </body>
 </html>
