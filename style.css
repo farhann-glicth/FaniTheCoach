@@ -155,42 +155,56 @@ body{
 .faq{margin-top:18px;background:rgba(255,255,255,0.02);padding:14px;border-radius:8px;border-left:3px solid var(--gold2)}
 
 /* Contact section layout */
-.contact-grid {
+/* Contact Buttons */
+.contact-buttons {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
   flex-wrap: wrap;
 }
 
-/* Social icon area */
+.btn-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+  background: linear-gradient(90deg, var(--gold), var(--gold2));
+  box-shadow: 0 8px 20px rgba(202,169,63,0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-contact img {
+  width: 22px;
+  height: 22px;
+}
+
+.btn-contact:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(202,169,63,0.3);
+}
+
+/* Social icons styling */
 .social-icons {
   display: flex;
-  gap: 22px;
+  gap: 20px;
   align-items: center;
   justify-content: flex-end;
 }
 
 .social-icons a img {
-  width: 36px;
-  height: 36px;
-  filter: drop-shadow(0 0 8px rgba(255,215,0,0.2));
-  transition: transform 0.3s, filter 0.3s;
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 6px rgba(255,215,0,0.2));
 }
 
 .social-icons a:hover img {
-  transform: scale(1.15);
+  transform: scale(1.2);
   filter: drop-shadow(0 0 12px rgba(255,215,0,0.5));
-}
-
-/* Align with section styling */
-.contact-left {
-  max-width: 540px;
-}
-
-.contact-right {
-  display: flex;
-  justify-content: flex-end;
-  flex: 1;
 }
 
 
