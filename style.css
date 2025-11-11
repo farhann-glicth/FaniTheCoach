@@ -154,9 +154,45 @@ body{
 /* FAQ */
 .faq{margin-top:18px;background:rgba(255,255,255,0.02);padding:14px;border-radius:8px;border-left:3px solid var(--gold2)}
 
-/* CONTACT CARD */
-.contact-card{display:inline-block;background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-.contact-card a{color:var(--gold2);text-decoration:none;font-weight:700}
+/* Contact section layout */
+.contact-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Social icon area */
+.social-icons {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.social-icons a img {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 0 8px rgba(255,215,0,0.2));
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 12px rgba(255,215,0,0.5));
+}
+
+/* Align with section styling */
+.contact-left {
+  max-width: 540px;
+}
+
+.contact-right {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
 
 /* FOOTER */
 .site-footer{background:linear-gradient(180deg,#090909,#0f0f0f);padding:22px 0;border-top:1px solid rgba(255,255,255,0.04);text-align:center;color:var(--muted)}
