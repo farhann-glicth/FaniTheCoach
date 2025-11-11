@@ -12,31 +12,33 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="navbar">
-  <div class="navbar-inner">
-    <div class="nav-left">
-      <a href="#home" class="logo-link">
-        <img src="logo.png" alt="Fani The Coach Logo" class="logo">
+
+  <!-- NAVBAR (fixed) -->
+  <header class="navbar" role="banner">
+    <div class="navbar-inner">
+      <a class="logo-area" href="#home" aria-label="Fani The Coach — Home">
+        <img src="logo.png" alt="Fani The Coach logo" class="logo-img">
+        <span class="tagline shimmer">Transform · Elevate · Dominate</span>
       </a>
-      <span class="tagline">Transform ~ Elevate ~ Dominate </span>
+
+      <nav class="nav-links" role="navigation" aria-label="Main Navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#transformations">Transformations</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    
-    <nav class="nav-right">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#transformations">Transformations</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#contact">Contact</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-  </div>
-</header>
-<!-- HERO -->
+  </header>
+
+  <!-- HERO -->
   <main>
     <section id="home" class="hero" aria-label="Hero">
       <div class="hero-overlay"></div>
       <div class="hero-content wrap">
-        <h1 class="hero-title">Muhammad Farhan Abbasi</h1>
+        <h1 class="hero-title">Muhammad Farhan Yameen</h1>
         <p class="hero-slogan">Certified Personal Trainer & Transformation Coach</p>
 
         <div class="hero-about">
@@ -60,6 +62,14 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ABOUT (anchor target for nav) -->
+    <section id="about" class="section">
+      <div class="wrap">
+        <h2>About</h2>
+        <p class="muted">I’m Fani — a results-driven coach who combines science-based programming with real-world accountability to deliver transformations that last.</p>
       </div>
     </section>
 
@@ -136,8 +146,8 @@
       <div class="wrap">
         <h2>Testimonials</h2>
         <div class="testimonials-grid">
-          <blockquote class="testi">“I lost 12kg and gained confidence — Fani’s plans are real.” <footer>- Roohi</footer></blockquote>
-          <blockquote class="testi">“Professional, motivating, and results-driven.” <footer>- Raghib</footer></blockquote>
+          <blockquote class="testi">“I lost 12kg and gained confidence — Fani’s plans are real.” <footer>- Ayesha</footer></blockquote>
+          <blockquote class="testi">“Professional, motivating, and results-driven.” <footer>- Bilal</footer></blockquote>
         </div>
       </div>
     </section>
@@ -176,23 +186,32 @@
       <p class="muted">Follow: <a href="https://instagram.com/fani_thecoach" target="_blank" class="muted">@fani_thecoach</a> • <a href="https://facebook.com/fani.thecoach" target="_blank" class="muted">fb/fani.thecoach</a> • Snapchat f4fanii</p>
     </div>
   </footer>
-  
-<script>
-  // Smooth scroll active link effect
-  const links = document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll', () => {
-    let fromTop = window.scrollY;
-    links.forEach(link => {
-      const section = document.querySelector(link.hash);
-      if (section && section.offsetTop <= fromTop + 100 && section.offsetTop + section.offsetHeight > fromTop + 100) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
+
+  <!-- Small JS: smooth scroll, reveal, year -->
+  <script>
+    // smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const href = this.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          const el = document.querySelector(href);
+          if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
     });
-  });
-</script>
 
+    // intersection reveal
+    const sections = document.querySelectorAll('.section, .hero-about, .gallery, .testimonials-grid');
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{
+        if(en.isIntersecting) en.target.classList.add('visible');
+      });
+    }, {threshold:.12});
+    sections.forEach(s=>obs.observe(s));
 
+    // current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
