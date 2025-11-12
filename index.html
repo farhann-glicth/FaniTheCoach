@@ -269,6 +269,34 @@
     navLinks.classList.toggle('active');
   });
 </script>
+  <script>
+// ===== AUTO SCROLL FOR SLIDERS =====
+document.querySelectorAll('.transform-slider, .testimonial-slider').forEach(slider => {
+  let scrollAmount = 0;
+  setInterval(() => {
+    slider.scrollBy({ left: 2, behavior: 'smooth' });
+    scrollAmount += 2;
+    if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+      slider.scrollTo({ left: 0, behavior: 'smooth' });
+      scrollAmount = 0;
+    }
+  }, 40);
+});
+
+// ===== FADE-IN ANIMATION ON SCROLL =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in-visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.section-dark').forEach(section => {
+  observer.observe(section);
+});
+</script>
+
  
 </body>
 </html>
