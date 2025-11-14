@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calorie & Macro Calculator | Fani The Coach</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #000;
+        color: #fff;
+    }
+
+    /* Metallic Container */
+    .calculator-box {
+        max-width: 600px;
+        margin: 120px auto;
+        padding: 40px;
+        border-radius: 18px;
+        background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+        border: 1px solid rgba(255, 215, 0, 0.15);
+        box-shadow: 0 0 35px rgba(255, 215, 0, 0.12);
+    }
+
+    .title {
+        text-align: center;
+        font-size: 34px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: gold;
+        letter-spacing: 1px;
+        text-shadow: 0 0 10px rgba(255,215,0,0.5);
+    }
+
+    .subtitle {
+        text-align: center;
+        font-size: 16px;
+        color: #ddd;
+        margin-bottom: 30px;
+    }
+
+    /* Form Fields */
+    .input-group {
+        margin-bottom: 18px;
+    }
+
+    label {
+        font-size: 15px;
+        font-weight: 600;
+        color: gold;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(255,215,0,0.3);
+        background: #111;
+        color: #fff;
+        margin-top: 6px;
+        font-size: 16px;
+    }
+
+    /* Button */
+    .calculate-btn {
+        margin-top: 20px;
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(90deg, gold, #ffdd77);
+        border: none;
+        border-radius: 12px;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        color: #000;
+        box-shadow: 0 0 20px rgba(255,215,0,0.4);
+        transition: 0.2s;
+    }
+
+    .calculate-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 35px rgba(255,215,0,0.7);
+    }
+
+    /* RESULT BOX */
+    .result-box {
+        margin-top: 30px;
+        padding: 20px;
+        border-radius: 12px;
+        background: rgba(255,215,0,0.08);
+        border: 1px solid rgba(255,215,0,0.25);
+        display: none;
+    }
+
+    .result-title {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: gold;
+    }
+
+    .result-line {
+        font-size: 16px;
+        margin: 6px 0;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="calculator-box">
+
+    <div class="title">Calorie & Macro Calculator</div>
+    <div class="subtitle">Calculate your daily calories + macros for fat loss, muscle gain or maintenance.</div>
+
+    <div class="input-group">
+        <label>Age</label>
+        <input type="number" id="age" placeholder="Enter your age">
+    </div>
+
+    <div class="input-group">
+        <label>Gender</label>
+        <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label>Weight (kg)</label>
+        <input type="number" id="weight" placeholder="Enter your weight">
+    </div>
+
+    <div class="input-group">
+        <label>Height (cm)</label>
+        <input type="number" id="height" placeholder="Enter your height">
+    </div>
+
+    <div class="input-group">
+        <label>Activity Level</label>
+        <select id="activity">
+            <option value="1.2">Sedentary (little or no exercise)</option>
+            <option value="1.375">Light exercise 1–3 days/week</option>
+            <option value="1.55">Moderate exercise 3–5 days/week</option>
+            <option value="1.725">Hard exercise 6–7 days/week</option>
+            <option value="1.9">Athlete / Very intense training</option>
+        </select>
+    </div>
+
+    <button class="calculate-btn" onclick="calculateCalories()">Calculate</button>
+
+    <div class="result-box" id="result">
+        <div class="result-title">Your Daily Requirements:</div>
+        <div class="result-line" id="maintenance"></div>
+        <div class="result-line" id="loss"></div>
+        <div class="result-line" id="gain"></div>
+        <br>
+        <div class="result-title">Macros Breakdown:</div>
+        <div class="result-line" id="protein"></div>
+        <div class="result-line" id="carbs"></div>
+        <div class="result-line" id="fats"></div>
+    </div>
+
+</div>
+
+<script>
+function calculateCalories() {
+    let age = parseInt(document.getElementById("age").value);
+    let gender = document.getElementById("gender").value;
+    let weight = parseFloat(document.getElementById("weight").value);
+    let height = parseFloat(document.getElementById("height").value);
+    let activity = parseFloat(document.getElementById("activity").value);
+
+    if (!age || !weight || !height) {
+        alert("Please fill all fields!");
+        return;
+    }
+
+    let bmr;
+
+    if (gender === "male") {
+        bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+    } else {
+        bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+    }
+
+    let maintenance = Math.round(bmr * activity);
+    let fatLoss = maintenance - 450;
+    let muscleGain = maintenance + 350;
+
+    let proteinGrams = Math.round(weight * 2.2); // 2.2g per kg
+    let fatsGrams = Math.round((maintenance * 0.25) / 9);
+    let carbsGrams = Math.round((maintenance - (proteinGrams * 4 + fatsGrams * 9)) / 4);
+
+    document.getElementById("maintenance").innerHTML = `Maintenance Calories: <b>${maintenance}</b>`;
+    document.getElementById("loss").innerHTML = `Fat Loss Calories: <b>${fatLoss}</b>`;
+    document.getElementById("gain").innerHTML = `Muscle Gain Calories: <b>${muscleGain}</b>`;
+
+    document.getElementById("protein").innerHTML = `Protein: <b>${proteinGrams} g</b>`;
+    document.getElementById("carbs").innerHTML = `Carbs: <b>${carbsGrams} g</b>`;
+    document.getElementById("fats").innerHTML = `Fats: <b>${fatsGrams} g</b>`;
+
+    document.getElementById("result").style.display = "block";
+}
+</script>
+
+</body>
+</html>
